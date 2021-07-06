@@ -14,13 +14,14 @@ protocol FavouritesViewModelProtocol: AnyObject {
 final class FavouritesViewModel: FavouritesViewModelProtocol {
     
     func fetchFromFavourites() throws -> UIImage {
-        var images = UIImage()
+        var images = [UIImage]()
         do {
-            images = try ImagesFileManager.shared.fetchFromFavourites().last ?? UIImage(named: "emptyAlbum")!
+            images = try ImagesFileManager.shared.fetchFromFavourites()
+                //.last ?? UIImage(named: "emptyAlbum")!
         } catch {
             throw FileManagerErrors.FetchError
         }
-        return images
+        return images.last ?? UIImage(named: "emptyAlbum")!
     }
 
 }

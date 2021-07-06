@@ -29,7 +29,11 @@ final class AppCoordinator: CoordinatorProtocol {
 //        self.window?.overrideUserInterfaceStyle = .light
     }
     
-    func proceedToFavouritesVC(coordinator: CoordinatorProtocol?) {
+    func popViewController() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func proceedToFavouritesVC(coordinator: CoordinatorProtocol) {
         let vc = FavouritesViewController.instantiateFromStoryboard()
         vc.coordinator = coordinator
         navigationController?.pushViewController(vc, animated: true)
