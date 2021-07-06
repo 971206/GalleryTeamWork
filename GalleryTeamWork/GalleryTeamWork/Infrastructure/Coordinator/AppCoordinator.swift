@@ -17,16 +17,19 @@ final class AppCoordinator: CoordinatorProtocol {
             }
     
     func start() {
-        let vc = TabBarViewController.instantiateFromStoryboard()
+        let vc = DetailPageViewController.instantiateFromStoryboard()
         vc.coordinator = self
         navigationController?.pushViewController(vc, animated: true)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
-        
-//        let tabBarVC = TabBarViewController()
-//        self.window!.rootViewController = tabBarVC
-//        self.window!.makeKeyAndVisible()
-//        self.window?.overrideUserInterfaceStyle = .light
+
+    }
+    
+    func proceedToEdit(with image: UIImage) {
+        let vc = EditPageViewController.instantiateFromStoryboard()
+        vc.imageView.image = image
+        vc.coordinator = self
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 

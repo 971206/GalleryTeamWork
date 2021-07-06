@@ -20,6 +20,10 @@
 		FA83519E2694583B00F9DD38 /* TabBarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA83519D2694583B00F9DD38 /* TabBarViewController.storyboard */; };
 		FA8351A02694585900F9DD38 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83519F2694585900F9DD38 /* TabBarViewController.swift */; };
 		FA8351A3269459D400F9DD38 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8351A2269459D400F9DD38 /* BaseViewController.swift */; };
+		FA875E30269494FA00F892FF /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA875E2F269494FA00F892FF /* DetailPageViewController.swift */; };
+		FA875E322694950F00F892FF /* DetailPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA875E312694950F00F892FF /* DetailPageViewController.storyboard */; };
+		FA875E3626949C6300F892FF /* EditPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA875E3526949C6300F892FF /* EditPageViewController.swift */; };
+		FA875E3826949C6B00F892FF /* EditPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA875E3726949C6B00F892FF /* EditPageViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		FA83519D2694583B00F9DD38 /* TabBarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarViewController.storyboard; sourceTree = "<group>"; };
 		FA83519F2694585900F9DD38 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		FA8351A2269459D400F9DD38 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		FA875E2F269494FA00F892FF /* DetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
+		FA875E312694950F00F892FF /* DetailPageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailPageViewController.storyboard; sourceTree = "<group>"; };
+		FA875E3526949C6300F892FF /* EditPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPageViewController.swift; sourceTree = "<group>"; };
+		FA875E3726949C6B00F892FF /* EditPageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditPageViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				FA8351882694557800F9DD38 /* TabBar */,
+				FA875E3426949C4900F892FF /* EditPage */,
+				FA875E332694951600F892FF /* DetailPage */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -184,6 +194,24 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		FA875E332694951600F892FF /* DetailPage */ = {
+			isa = PBXGroup;
+			children = (
+				FA875E2F269494FA00F892FF /* DetailPageViewController.swift */,
+				FA875E312694950F00F892FF /* DetailPageViewController.storyboard */,
+			);
+			path = DetailPage;
+			sourceTree = "<group>";
+		};
+		FA875E3426949C4900F892FF /* EditPage */ = {
+			isa = PBXGroup;
+			children = (
+				FA875E3526949C6300F892FF /* EditPageViewController.swift */,
+				FA875E3726949C6B00F892FF /* EditPageViewController.storyboard */,
+			);
+			path = EditPage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -241,8 +269,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA875E3826949C6B00F892FF /* EditPageViewController.storyboard in Resources */,
 				FA83519E2694583B00F9DD38 /* TabBarViewController.storyboard in Resources */,
 				FA83517F2694539E00F9DD38 /* LaunchScreen.storyboard in Resources */,
+				FA875E322694950F00F892FF /* DetailPageViewController.storyboard in Resources */,
 				FA83517C2694539E00F9DD38 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +293,8 @@
 				FA835190269456DA00F9DD38 /* UICollectionView + Extension.swift in Sources */,
 				FA83519B269457A100F9DD38 /* AppCoordinator.swift in Sources */,
 				FA8351752694539D00F9DD38 /* SceneDelegate.swift in Sources */,
+				FA875E3626949C6300F892FF /* EditPageViewController.swift in Sources */,
+				FA875E30269494FA00F892FF /* DetailPageViewController.swift in Sources */,
 				FA8351992694579900F9DD38 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

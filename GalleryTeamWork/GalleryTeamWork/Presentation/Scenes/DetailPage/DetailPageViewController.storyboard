@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qze-hF-brS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image-->
+        <scene sceneID="Awj-GK-C1W">
+            <objects>
+                <viewController storyboardIdentifier="DetailPageViewController" id="aKA-bQ-qib" customClass="DetailPageViewController" customModule="GalleryTeamWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nbw-rD-BjI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xRu-il-zgm">
+                                <rect key="frame" x="0.0" y="88" width="414" height="700"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="700" id="w4t-8n-Mnq"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="102" translatesAutoresizingMaskIntoConstraints="NO" id="iBi-VV-vrh">
+                                <rect key="frame" x="20" y="808" width="374" height="22"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpv-Yq-POu">
+                                        <rect key="frame" x="0.0" y="0.0" width="56.5" height="22"/>
+                                        <state key="normal" image="arrowshape.turn.up.right.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="onShare:" destination="aKA-bQ-qib" eventType="touchUpInside" id="Xf0-TL-Fn2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfd-VJ-TUw">
+                                        <rect key="frame" x="158.5" y="0.0" width="57" height="22"/>
+                                        <state key="normal" image="heart.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="onFavorite:" destination="aKA-bQ-qib" eventType="touchUpInside" id="8Bd-rZ-i9s"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nI-PG-mAv">
+                                        <rect key="frame" x="317.5" y="0.0" width="56.5" height="22"/>
+                                        <state key="normal" title="Button" image="trash.circle" catalog="system"/>
+                                        <connections>
+                                            <action selector="onDelete:" destination="aKA-bQ-qib" eventType="touchUpInside" id="Edx-fX-Bc0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="92w-cI-uE5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iBi-VV-vrh" firstAttribute="leading" secondItem="92w-cI-uE5" secondAttribute="leading" constant="20" id="20D-6U-emY"/>
+                            <constraint firstItem="xRu-il-zgm" firstAttribute="top" secondItem="92w-cI-uE5" secondAttribute="top" id="2YM-N3-9Ri"/>
+                            <constraint firstItem="92w-cI-uE5" firstAttribute="trailing" secondItem="iBi-VV-vrh" secondAttribute="trailing" constant="20" id="NSQ-vg-6zX"/>
+                            <constraint firstItem="92w-cI-uE5" firstAttribute="trailing" secondItem="xRu-il-zgm" secondAttribute="trailing" id="nGh-xh-cck"/>
+                            <constraint firstItem="iBi-VV-vrh" firstAttribute="top" secondItem="xRu-il-zgm" secondAttribute="bottom" constant="20" id="nrB-Y7-isP"/>
+                            <constraint firstItem="xRu-il-zgm" firstAttribute="leading" secondItem="92w-cI-uE5" secondAttribute="leading" id="r3S-ba-SRX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Image" id="mUu-UX-w1J">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="iYL-6P-qPv">
+                            <connections>
+                                <action selector="onEdit:" destination="aKA-bQ-qib" id="1LB-CX-Uen"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="xRu-il-zgm" id="IW6-Qp-PWh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="geK-F3-W7P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2757.971014492754" y="56.919642857142854"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="roB-02-zSW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qze-hF-brS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZtQ-3k-Ynh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aKA-bQ-qib" kind="relationship" relationship="rootViewController" id="jMs-ma-2DJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c6j-0c-o32" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1847.826086956522" y="56.919642857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <image name="trash.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
