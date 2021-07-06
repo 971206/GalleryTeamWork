@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19115.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19107.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera-->
+        <scene sceneID="dVT-sP-fgN">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fcr-Xf-yrL" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="CameraViewController" id="tm3-Ge-qDc" customClass="CameraViewController" customModule="GalleryTeamWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="64M-vl-Uhj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cat-us-VGo">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="clZ-kt-LtX">
+                                <rect key="frame" x="30" y="797" width="354" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAi-iX-lOX">
+                                        <rect key="frame" x="0.0" y="0.0" width="169.5" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Take picture">
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onTapTakePicture:" destination="tm3-Ge-qDc" eventType="touchUpInside" id="30H-vL-Gif"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGS-4D-40c">
+                                        <rect key="frame" x="184.5" y="0.0" width="169.5" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Save">
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onTapSave:" destination="tm3-Ge-qDc" eventType="touchUpInside" id="aAf-lj-jzE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ubv-CO-RMJ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xrN-Ru-S3y"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cat-us-VGo" firstAttribute="top" secondItem="64M-vl-Uhj" secondAttribute="top" id="5M1-cy-Ret"/>
+                            <constraint firstItem="xrN-Ru-S3y" firstAttribute="bottom" secondItem="clZ-kt-LtX" secondAttribute="bottom" constant="15" id="64G-yK-cpu"/>
+                            <constraint firstItem="cat-us-VGo" firstAttribute="bottom" secondItem="xrN-Ru-S3y" secondAttribute="bottom" id="GbD-LE-rHi"/>
+                            <constraint firstItem="cat-us-VGo" firstAttribute="leading" secondItem="xrN-Ru-S3y" secondAttribute="leading" id="LYg-rb-Poa"/>
+                            <constraint firstItem="xrN-Ru-S3y" firstAttribute="trailing" secondItem="clZ-kt-LtX" secondAttribute="trailing" constant="30" id="T0p-F9-8HJ"/>
+                            <constraint firstItem="clZ-kt-LtX" firstAttribute="leading" secondItem="xrN-Ru-S3y" secondAttribute="leading" constant="30" id="pfR-1v-bjk"/>
+                            <constraint firstItem="cat-us-VGo" firstAttribute="trailing" secondItem="xrN-Ru-S3y" secondAttribute="trailing" id="yWM-MC-DJq"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Camera" image="camera" catalog="system" id="vhb-Jb-dZy"/>
+                    <connections>
+                        <outlet property="imageView" destination="cat-us-VGo" id="7rn-Sv-HH0"/>
+                        <outlet property="saveButton" destination="hGS-4D-40c" id="Owu-Dt-eAC"/>
+                        <outlet property="takePictureButton" destination="zAi-iX-lOX" id="oGv-af-6hf"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="28" y="76"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera" catalog="system" width="128" height="94"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
