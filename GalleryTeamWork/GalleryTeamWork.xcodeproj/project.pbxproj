@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63527F782694903A00EA6617 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63527F772694903A00EA6617 /* FileManager.swift */; };
 		FA8351732694539C00F9DD38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8351722694539C00F9DD38 /* AppDelegate.swift */; };
 		FA8351752694539D00F9DD38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8351742694539D00F9DD38 /* SceneDelegate.swift */; };
 		FA83517C2694539E00F9DD38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA83517B2694539E00F9DD38 /* Assets.xcassets */; };
@@ -24,9 +25,11 @@
 		FA875E322694950F00F892FF /* DetailPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA875E312694950F00F892FF /* DetailPageViewController.storyboard */; };
 		FA875E3626949C6300F892FF /* EditPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA875E3526949C6300F892FF /* EditPageViewController.swift */; };
 		FA875E3826949C6B00F892FF /* EditPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA875E3726949C6B00F892FF /* EditPageViewController.storyboard */; };
+		FA9C1DE82694C2F000A43BB7 /* DetailPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9C1DE72694C2F000A43BB7 /* DetailPageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63527F772694903A00EA6617 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		FA83516F2694539C00F9DD38 /* GalleryTeamWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GalleryTeamWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8351722694539C00F9DD38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA8351742694539D00F9DD38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +49,7 @@
 		FA875E312694950F00F892FF /* DetailPageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailPageViewController.storyboard; sourceTree = "<group>"; };
 		FA875E3526949C6300F892FF /* EditPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPageViewController.swift; sourceTree = "<group>"; };
 		FA875E3726949C6B00F892FF /* EditPageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditPageViewController.storyboard; sourceTree = "<group>"; };
+		FA9C1DE72694C2F000A43BB7 /* DetailPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63527F762694902300EA6617 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				63527F772694903A00EA6617 /* FileManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		FA8351662694539C00F9DD38 = {
 			isa = PBXGroup;
 			children = (
@@ -143,18 +155,11 @@
 		FA83518C269456AE00F9DD38 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				63527F762694902300EA6617 /* Manager */,
 				FA8351932694576D00F9DD38 /* Coordinator */,
 				FA83518E269456BE00F9DD38 /* Extensions */,
-				FA83518D269456BA00F9DD38 /* Managers */,
 			);
 			path = Infrastructure;
-			sourceTree = "<group>";
-		};
-		FA83518D269456BA00F9DD38 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Managers;
 			sourceTree = "<group>";
 		};
 		FA83518E269456BE00F9DD38 /* Extensions */ = {
@@ -197,8 +202,8 @@
 		FA875E332694951600F892FF /* DetailPage */ = {
 			isa = PBXGroup;
 			children = (
-				FA875E2F269494FA00F892FF /* DetailPageViewController.swift */,
-				FA875E312694950F00F892FF /* DetailPageViewController.storyboard */,
+				FA9C1DE32694C02600A43BB7 /* View */,
+				FA9C1DE62694C04600A43BB7 /* ViewModel */,
 			);
 			path = DetailPage;
 			sourceTree = "<group>";
@@ -206,10 +211,43 @@
 		FA875E3426949C4900F892FF /* EditPage */ = {
 			isa = PBXGroup;
 			children = (
+				FA9C1DE52694C03F00A43BB7 /* ViewModel */,
+				FA9C1DE42694C03000A43BB7 /* View */,
+			);
+			path = EditPage;
+			sourceTree = "<group>";
+		};
+		FA9C1DE32694C02600A43BB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA875E2F269494FA00F892FF /* DetailPageViewController.swift */,
+				FA875E312694950F00F892FF /* DetailPageViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA9C1DE42694C03000A43BB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				FA875E3526949C6300F892FF /* EditPageViewController.swift */,
 				FA875E3726949C6B00F892FF /* EditPageViewController.storyboard */,
 			);
-			path = EditPage;
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA9C1DE52694C03F00A43BB7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA9C1DE62694C04600A43BB7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA9C1DE72694C2F000A43BB7 /* DetailPageViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,8 +329,10 @@
 				FA8351A02694585900F9DD38 /* TabBarViewController.swift in Sources */,
 				FA8351A3269459D400F9DD38 /* BaseViewController.swift in Sources */,
 				FA835190269456DA00F9DD38 /* UICollectionView + Extension.swift in Sources */,
+				63527F782694903A00EA6617 /* FileManager.swift in Sources */,
 				FA83519B269457A100F9DD38 /* AppCoordinator.swift in Sources */,
 				FA8351752694539D00F9DD38 /* SceneDelegate.swift in Sources */,
+				FA9C1DE82694C2F000A43BB7 /* DetailPageViewModel.swift in Sources */,
 				FA875E3626949C6300F892FF /* EditPageViewController.swift in Sources */,
 				FA875E30269494FA00F892FF /* DetailPageViewController.swift in Sources */,
 				FA8351992694579900F9DD38 /* Storyboarded.swift in Sources */,

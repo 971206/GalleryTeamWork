@@ -11,6 +11,7 @@ class DetailPageViewController: BaseViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var OnEdit: UIBarButtonItem!
+    private var viewModel: DetailPageViewModelProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,10 +27,16 @@ class DetailPageViewController: BaseViewController {
         
     }
     @IBAction func onShare(_ sender: Any) {
+        coordinator?.alertProblem()
     }
     @IBAction func onFavorite(_ sender: Any) {
+        
     }
     
     @IBAction func onDelete(_ sender: Any) {
+    }
+    
+    private func addToFavorites() {
+        try? viewModel.saveInFavourites(imgName: UUID().uuidString, image: imageView.image!)
     }
 }
