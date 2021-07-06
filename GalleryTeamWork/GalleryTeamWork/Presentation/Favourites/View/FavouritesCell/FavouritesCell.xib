@@ -34,8 +34,7 @@
             </constraints>
             <size key="customSize" width="213" height="198"/>
             <connections>
-                <outlet property="favouriteImg" destination="oZD-4h-dEx" id="nrB-NH-OcP"/>
-                <outlet property="favouritesImage" destination="oZD-4h-dEx" id="YQm-N5-57s"/>
+                <outlet property="favouriteImg" destination="oZD-4h-dEx" id="nZR-c0-B7u"/>
             </connections>
             <point key="canvasLocation" x="23.188405797101453" y="41.517857142857139"/>
         </collectionViewCell>

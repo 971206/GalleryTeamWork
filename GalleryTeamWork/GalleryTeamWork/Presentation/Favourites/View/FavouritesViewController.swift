@@ -17,13 +17,13 @@ class FavouritesViewController: BaseViewController {
         
         collectionView.registerNib(class: FavouritesCell.self)
         
-       // configureViewModel()
+        configureViewModel()
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         super .viewWillAppear(true)
-        favouritesDataSource?.refresh()
+        favouritesDataSource.refresh()
     }
     
     private func configureViewModel() {
