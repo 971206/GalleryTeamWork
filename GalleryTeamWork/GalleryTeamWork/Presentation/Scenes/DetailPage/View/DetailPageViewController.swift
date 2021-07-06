@@ -30,13 +30,15 @@ class DetailPageViewController: BaseViewController {
         coordinator?.alertProblem()
     }
     @IBAction func onFavorite(_ sender: Any) {
-        
+        addToFavorites()
     }
     
     @IBAction func onDelete(_ sender: Any) {
+        
     }
     
     private func addToFavorites() {
+        viewModel = DetailPageViewModel()
         try? viewModel.saveInFavourites(imgName: UUID().uuidString, image: imageView.image!)
     }
 }
