@@ -15,10 +15,23 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
+                    <connections>
+                        <segue destination="5RD-Xf-1b2" kind="relationship" relationship="viewControllers" id="eVh-kK-Cw7"/>
+                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bc5-3g-HXC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-947" y="-35"/>
+        </scene>
+        <!--FavouritesViewController-->
+        <scene sceneID="tpk-9L-Bnp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FavouritesViewController" referencedIdentifier="FavouritesViewController" id="5RD-Xf-1b2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="swM-MS-0wL"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UiV-MT-soA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-318" y="-35"/>
         </scene>
     </scenes>
 </document>
