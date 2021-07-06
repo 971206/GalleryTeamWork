@@ -211,7 +211,6 @@
 		FA875E3426949C4900F892FF /* EditPage */ = {
 			isa = PBXGroup;
 			children = (
-				FA9C1DE52694C03F00A43BB7 /* ViewModel */,
 				FA9C1DE42694C03000A43BB7 /* View */,
 			);
 			path = EditPage;
@@ -233,13 +232,6 @@
 				FA875E3726949C6B00F892FF /* EditPageViewController.storyboard */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		FA9C1DE52694C03F00A43BB7 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		FA9C1DE62694C04600A43BB7 /* ViewModel */ = {
