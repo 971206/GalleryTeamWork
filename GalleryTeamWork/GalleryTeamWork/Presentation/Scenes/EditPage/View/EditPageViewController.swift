@@ -13,10 +13,16 @@ class EditPageViewController: BaseViewController, UIScrollViewDelegate {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var imageViewWidth: NSLayoutConstraint!
     @IBOutlet var imageViewHeight: NSLayoutConstraint!
+    
+    let fileManager = FileManager.default
+    private var documentsDirectoryURL: URL? {
+        try? fileManager.url(for: .documentDirectory, in: .allDomainsMask, appropriateFor: nil, create: false)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setImageToCrop(image: imageView.image!)
+        print(documentsDirectoryURL)
 
     }
     
@@ -45,10 +51,25 @@ class EditPageViewController: BaseViewController, UIScrollViewDelegate {
         let croppedCGImage = imageView.image?.cgImage?.cropping(to: CGRect(x: x, y: y, width: width, height: height))
         let croppedImage = UIImage(cgImage: croppedCGImage!)
         setImageToCrop(image: croppedImage)
+        saveFile(with: (imageView.image?.pngData())!)
     }
     
     
     @IBAction func onRotate(_ sender: Any) {
         imageView.transform = imageView.transform.rotated(by: .pi / 2)
+    }
+    
+    func saveFile(with data: Data) {
+        guard let documentsDirectory = documentsDirectoryURL else {return}
+        
+        let randomImageName = "\(UUID.init().uuidString).png"
+        
+        let imagePath = documentsDirectory.appendingPathComponent(randomImageName)
+        
+        do {
+            try data.write(to: imagePath)
+        } catch {
+            print(error)
+        }
     }
 }
