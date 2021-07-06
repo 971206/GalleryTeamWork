@@ -8,8 +8,8 @@ class FavouritesViewController: BaseViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    private var favouritesViewModel: FavouritesViewModelProtocol?
-    private var favouritesDataSource: FavouritesDataSource?
+    private var favouritesViewModel: FavouritesViewModelProtocol!
+    private var favouritesDataSource: FavouritesDataSource!
     
     
     override func viewDidLoad() {
@@ -28,10 +28,9 @@ class FavouritesViewController: BaseViewController {
     
     private func configureViewModel() {
         favouritesViewModel = FavouritesViewModel()
-
         favouritesDataSource = FavouritesDataSource(with: collectionView, viewModel: favouritesViewModel!, coordinator: coordinator!)
         
-        favouritesDataSource?.refresh()
+        favouritesDataSource.refresh()
     }
 
 }

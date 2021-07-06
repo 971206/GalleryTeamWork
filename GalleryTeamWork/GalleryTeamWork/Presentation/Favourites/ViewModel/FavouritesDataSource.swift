@@ -29,17 +29,17 @@ class FavouritesDataSource: NSObject {
     
     func refresh() {
         do {
-            images = try viewModel.fetchGalleryImages()
+            images.append(try viewModel.fetchFromFavourites())
             collectionView.reloadData()
+            
         } catch {
             print("Unknow Error, while loading images please try again.")
         }
     }
-
+    
     
 }
 
-// MARK: - UICollectionView Data Source
 extension FavouritesDataSource:  UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -54,14 +54,12 @@ extension FavouritesDataSource:  UICollectionViewDataSource{
     
 }
 
-// MARK: - UICollectionView Delegate
 extension FavouritesDataSource: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-      //  coordinator.navigateToDetails(with image: images[indexPath.row])
+
     }
 }
 
-// MARK: - UICollectionView Delegate Flow Layout
 extension FavouritesDataSource: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.bounds.width/3.0

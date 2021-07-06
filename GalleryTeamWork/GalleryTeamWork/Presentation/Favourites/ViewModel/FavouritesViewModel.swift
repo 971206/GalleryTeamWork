@@ -8,15 +8,15 @@
 import UIKit
 
 protocol FavouritesViewModelProtocol: AnyObject {
-    func fetchGalleryImages() throws -> [UIImage]
+    func fetchFromFavourites() throws -> UIImage
 }
 
 final class FavouritesViewModel: FavouritesViewModelProtocol {
     
-    func fetchGalleryImages() throws -> [UIImage] {
-        var images = [UIImage]()
+    func fetchFromFavourites() throws -> UIImage {
+        var images = UIImage()
         do {
-            images = try ImagesFileManager.shared.fetchFromGallery()
+            images = try ImagesFileManager.shared.fetchFromFavourites().last ?? UIImage(named: "emptyAlbum")!
         } catch {
             throw FileManagerErrors.FetchError
         }
