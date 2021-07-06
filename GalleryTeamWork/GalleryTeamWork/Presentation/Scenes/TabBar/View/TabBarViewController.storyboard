@@ -18,11 +18,22 @@
                     </tabBar>
                     <connections>
                         <segue destination="5RD-Xf-1b2" kind="relationship" relationship="viewControllers" id="eVh-kK-Cw7"/>
+                        <segue destination="xaW-hl-Gz9" kind="relationship" relationship="viewControllers" id="zpI-F2-7bG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bc5-3g-HXC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-947" y="-35"/>
+        </scene>
+        <!--CameraViewController-->
+        <scene sceneID="0p9-XM-OsD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CameraViewController" referencedIdentifier="CameraViewController" id="xaW-hl-Gz9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="2Tl-9J-DsW"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4iL-oS-xZr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-307" y="-173"/>
         </scene>
         <!--FavouritesViewController-->
         <scene sceneID="tpk-9L-Bnp">
