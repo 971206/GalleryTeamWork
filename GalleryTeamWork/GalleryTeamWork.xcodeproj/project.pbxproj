@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,11 @@
 		63527F852694941B00EA6617 /* FavouritesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63527F832694941B00EA6617 /* FavouritesCell.swift */; };
 		63527F862694941B00EA6617 /* FavouritesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63527F842694941B00EA6617 /* FavouritesCell.xib */; };
 		63527F882694942A00EA6617 /* FavouritesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63527F872694942A00EA6617 /* FavouritesViewController.storyboard */; };
+		3D2431F3269473320045FE46 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3D2431F2269473320045FE46 /* Kingfisher */; };
+		3DEDBE0726946C2300282D86 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEDBE0626946C2300282D86 /* GalleryViewController.swift */; };
+		3DEDBE0A26946D3A00282D86 /* GalleryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DEDBE0926946D3A00282D86 /* GalleryViewController.storyboard */; };
+		3DEDBE0D26946D9500282D86 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEDBE0B26946D9500282D86 /* GalleryCell.swift */; };
+		3DEDBE0E26946D9500282D86 /* GalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DEDBE0C26946D9500282D86 /* GalleryCell.xib */; };
 		FA8351732694539C00F9DD38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8351722694539C00F9DD38 /* AppDelegate.swift */; };
 		FA8351752694539D00F9DD38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8351742694539D00F9DD38 /* SceneDelegate.swift */; };
 		FA83517C2694539E00F9DD38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA83517B2694539E00F9DD38 /* Assets.xcassets */; };
@@ -42,6 +47,10 @@
 		63527F832694941B00EA6617 /* FavouritesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesCell.swift; sourceTree = "<group>"; };
 		63527F842694941B00EA6617 /* FavouritesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouritesCell.xib; sourceTree = "<group>"; };
 		63527F872694942A00EA6617 /* FavouritesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavouritesViewController.storyboard; sourceTree = "<group>"; };
+		3DEDBE0626946C2300282D86 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		3DEDBE0926946D3A00282D86 /* GalleryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GalleryViewController.storyboard; sourceTree = "<group>"; };
+		3DEDBE0B26946D9500282D86 /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GalleryCell.swift; path = "GalleryTeamWork/Presentation/Scenes/Gallery/New Group1/GalleryCell.swift"; sourceTree = SOURCE_ROOT; };
+		3DEDBE0C26946D9500282D86 /* GalleryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GalleryCell.xib; path = "GalleryTeamWork/Presentation/Scenes/Gallery/New Group1/GalleryCell.xib"; sourceTree = SOURCE_ROOT; };
 		FA83516F2694539C00F9DD38 /* GalleryTeamWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GalleryTeamWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8351722694539C00F9DD38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA8351742694539D00F9DD38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D2431F3269473320045FE46 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,8 +188,6 @@
 			isa = PBXGroup;
 			children = (
 				FA8351882694557800F9DD38 /* TabBar */,
-				FA875E3426949C4900F892FF /* EditPage */,
-				FA875E332694951600F892FF /* DetailPage */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -248,49 +256,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		FA875E332694951600F892FF /* DetailPage */ = {
-			isa = PBXGroup;
-			children = (
-				FA9C1DE32694C02600A43BB7 /* View */,
-				FA9C1DE62694C04600A43BB7 /* ViewModel */,
-			);
-			path = DetailPage;
-			sourceTree = "<group>";
-		};
-		FA875E3426949C4900F892FF /* EditPage */ = {
-			isa = PBXGroup;
-			children = (
-				FA9C1DE42694C03000A43BB7 /* View */,
-			);
-			path = EditPage;
-			sourceTree = "<group>";
-		};
-		FA9C1DE32694C02600A43BB7 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				FA875E2F269494FA00F892FF /* DetailPageViewController.swift */,
-				FA875E312694950F00F892FF /* DetailPageViewController.storyboard */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		FA9C1DE42694C03000A43BB7 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				FA875E3526949C6300F892FF /* EditPageViewController.swift */,
-				FA875E3726949C6B00F892FF /* EditPageViewController.storyboard */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		FA9C1DE62694C04600A43BB7 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				FA9C1DE72694C2F000A43BB7 /* DetailPageViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -307,6 +272,9 @@
 			dependencies = (
 			);
 			name = GalleryTeamWork;
+			packageProductDependencies = (
+				3D2431F2269473320045FE46 /* Kingfisher */,
+			);
 			productName = GalleryTeamWork;
 			productReference = FA83516F2694539C00F9DD38 /* GalleryTeamWork.app */;
 			productType = "com.apple.product-type.application";
@@ -334,6 +302,9 @@
 				Base,
 			);
 			mainGroup = FA8351662694539C00F9DD38;
+			packageReferences = (
+				3D2431F1269473320045FE46 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = FA8351702694539C00F9DD38 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -365,6 +336,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DEDBE0D26946D9500282D86 /* GalleryCell.swift in Sources */,
+				3DEDBE0726946C2300282D86 /* GalleryViewController.swift in Sources */,
 				FA835192269456EA00F9DD38 /* UICollectionViewCell + Extension.swift in Sources */,
 				63527F82269493DB00EA6617 /* FavouritesViewController.swift in Sources */,
 				FA8351972694579100F9DD38 /* CoordinatorDelegate.swift in Sources */,
@@ -574,6 +547,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3D2431F1269473320045FE46 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3D2431F2269473320045FE46 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D2431F1269473320045FE46 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA8351672694539C00F9DD38 /* Project object */;
 }
