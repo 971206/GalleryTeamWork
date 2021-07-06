@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum FileType: String {
+    case png
+    case jpg
+}
+
 class GalleryViewController: UIViewController {
 
     // MARK: - Properties
@@ -57,6 +62,22 @@ class GalleryViewController: UIViewController {
         "https://pureai.com/-/media/ECG/PureAI/Images/IntroImages2018/CoolSpacySplit.jpg"
     ]
     
+    func saveFile(with data: Data?, fileType: FileType) {
+        let documentsDir = try? FileManager.default.url(for: .documentDirectory, in: .allDomainsMask, appropriateFor: nil, create: false)
+        
+        let randomFileName = "\(UUID.init().uuidString).\(fileType.rawValue)"
+        
+        guard let filePath = documentsDir?.appendingPathComponent(randomFileName) else {return}
+        
+        do {
+            try data?.write(to: filePath)
+        } catch {
+            print(error)
+        }
+    
+        print(filePath)
+    }
+    
     private func setupLayout(collectionView: UICollectionView) {
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 0),
@@ -82,6 +103,7 @@ extension GalleryViewController: UICollectionViewDataSource {
 extension GalleryViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("bsbhbdjs")
+        saveFile(with: self.imageUrls[indexPath.row], fileType: .jpg)
     }
 }
 
