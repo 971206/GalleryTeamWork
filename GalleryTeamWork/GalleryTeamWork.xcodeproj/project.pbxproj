@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,11 @@
 		63527F852694941B00EA6617 /* FavouritesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63527F832694941B00EA6617 /* FavouritesCell.swift */; };
 		63527F862694941B00EA6617 /* FavouritesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63527F842694941B00EA6617 /* FavouritesCell.xib */; };
 		63527F882694942A00EA6617 /* FavouritesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63527F872694942A00EA6617 /* FavouritesViewController.storyboard */; };
+		3D2431F3269473320045FE46 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3D2431F2269473320045FE46 /* Kingfisher */; };
+		3DEDBE0726946C2300282D86 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEDBE0626946C2300282D86 /* GalleryViewController.swift */; };
+		3DEDBE0A26946D3A00282D86 /* GalleryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DEDBE0926946D3A00282D86 /* GalleryViewController.storyboard */; };
+		3DEDBE0D26946D9500282D86 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEDBE0B26946D9500282D86 /* GalleryCell.swift */; };
+		3DEDBE0E26946D9500282D86 /* GalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DEDBE0C26946D9500282D86 /* GalleryCell.xib */; };
 		FA8351732694539C00F9DD38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8351722694539C00F9DD38 /* AppDelegate.swift */; };
 		FA8351752694539D00F9DD38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8351742694539D00F9DD38 /* SceneDelegate.swift */; };
 		FA83517C2694539E00F9DD38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA83517B2694539E00F9DD38 /* Assets.xcassets */; };
@@ -37,6 +42,10 @@
 		63527F832694941B00EA6617 /* FavouritesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesCell.swift; sourceTree = "<group>"; };
 		63527F842694941B00EA6617 /* FavouritesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouritesCell.xib; sourceTree = "<group>"; };
 		63527F872694942A00EA6617 /* FavouritesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavouritesViewController.storyboard; sourceTree = "<group>"; };
+		3DEDBE0626946C2300282D86 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		3DEDBE0926946D3A00282D86 /* GalleryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GalleryViewController.storyboard; sourceTree = "<group>"; };
+		3DEDBE0B26946D9500282D86 /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GalleryCell.swift; path = "GalleryTeamWork/Presentation/Scenes/Gallery/New Group1/GalleryCell.swift"; sourceTree = SOURCE_ROOT; };
+		3DEDBE0C26946D9500282D86 /* GalleryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GalleryCell.xib; path = "GalleryTeamWork/Presentation/Scenes/Gallery/New Group1/GalleryCell.xib"; sourceTree = SOURCE_ROOT; };
 		FA83516F2694539C00F9DD38 /* GalleryTeamWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GalleryTeamWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8351722694539C00F9DD38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA8351742694539D00F9DD38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,55 +68,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D2431F3269473320045FE46 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		63527F762694902300EA6617 /* Manager */ = {
+		3D2431EE26946DCC0045FE46 /* New Group1 */ = {
 			isa = PBXGroup;
 			children = (
-				63527F772694903A00EA6617 /* FileManager.swift */,
+				3DEDBE0B26946D9500282D86 /* GalleryCell.swift */,
+				3DEDBE0C26946D9500282D86 /* GalleryCell.xib */,
 			);
-			path = Manager;
+			path = "New Group1";
 			sourceTree = "<group>";
 		};
-		63527F792694928300EA6617 /* Favourites */ = {
+		3D4DE86526946AB900377277 /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
-				63527F7B2694929D00EA6617 /* View */,
-				63527F7C269492B900EA6617 /* ViewModel */,
+				3D2431EE26946DCC0045FE46 /* New Group1 */,
+				3DEDBE0626946C2300282D86 /* GalleryViewController.swift */,
+				3DEDBE0926946D3A00282D86 /* GalleryViewController.storyboard */,
 			);
-			path = Favourites;
-			sourceTree = "<group>";
-		};
-		63527F7A2694929100EA6617 /* FavouritesCell */ = {
-			isa = PBXGroup;
-			children = (
-				63527F832694941B00EA6617 /* FavouritesCell.swift */,
-				63527F842694941B00EA6617 /* FavouritesCell.xib */,
-			);
-			path = FavouritesCell;
-			sourceTree = "<group>";
-		};
-		63527F7B2694929D00EA6617 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				63527F7A2694929100EA6617 /* FavouritesCell */,
-				63527F81269493DB00EA6617 /* FavouritesViewController.swift */,
-				63527F872694942A00EA6617 /* FavouritesViewController.storyboard */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		63527F7C269492B900EA6617 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				63527F7D269492FE00EA6617 /* FavouritesDataSource.swift */,
-				63527F7F2694934F00EA6617 /* FavouritesViewModel.swift */,
-			);
-			path = ViewModel;
+			path = Gallery;
 			sourceTree = "<group>";
 		};
 		FA8351662694539C00F9DD38 = {
@@ -168,6 +152,7 @@
 		FA835189269455CD00F9DD38 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3D4DE86526946AB900377277 /* Gallery */,
 				FA8351882694557800F9DD38 /* TabBar */,
 			);
 			path = Scenes;
@@ -253,6 +238,9 @@
 			dependencies = (
 			);
 			name = GalleryTeamWork;
+			packageProductDependencies = (
+				3D2431F2269473320045FE46 /* Kingfisher */,
+			);
 			productName = GalleryTeamWork;
 			productReference = FA83516F2694539C00F9DD38 /* GalleryTeamWork.app */;
 			productType = "com.apple.product-type.application";
@@ -280,6 +268,9 @@
 				Base,
 			);
 			mainGroup = FA8351662694539C00F9DD38;
+			packageReferences = (
+				3D2431F1269473320045FE46 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = FA8351702694539C00F9DD38 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -294,6 +285,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DEDBE0E26946D9500282D86 /* GalleryCell.xib in Resources */,
+				3DEDBE0A26946D3A00282D86 /* GalleryViewController.storyboard in Resources */,
 				FA83519E2694583B00F9DD38 /* TabBarViewController.storyboard in Resources */,
 				FA83517F2694539E00F9DD38 /* LaunchScreen.storyboard in Resources */,
 				FA83517C2694539E00F9DD38 /* Assets.xcassets in Resources */,
@@ -309,6 +302,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DEDBE0D26946D9500282D86 /* GalleryCell.swift in Sources */,
+				3DEDBE0726946C2300282D86 /* GalleryViewController.swift in Sources */,
 				FA835192269456EA00F9DD38 /* UICollectionViewCell + Extension.swift in Sources */,
 				63527F82269493DB00EA6617 /* FavouritesViewController.swift in Sources */,
 				FA8351972694579100F9DD38 /* CoordinatorDelegate.swift in Sources */,
@@ -515,6 +510,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3D2431F1269473320045FE46 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3D2431F2269473320045FE46 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D2431F1269473320045FE46 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA8351672694539C00F9DD38 /* Project object */;
 }
