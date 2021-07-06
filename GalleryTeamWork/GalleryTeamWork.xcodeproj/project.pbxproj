@@ -32,6 +32,11 @@
 		FA83519E2694583B00F9DD38 /* TabBarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA83519D2694583B00F9DD38 /* TabBarViewController.storyboard */; };
 		FA8351A02694585900F9DD38 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83519F2694585900F9DD38 /* TabBarViewController.swift */; };
 		FA8351A3269459D400F9DD38 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8351A2269459D400F9DD38 /* BaseViewController.swift */; };
+		FA875E30269494FA00F892FF /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA875E2F269494FA00F892FF /* DetailPageViewController.swift */; };
+		FA875E322694950F00F892FF /* DetailPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA875E312694950F00F892FF /* DetailPageViewController.storyboard */; };
+		FA875E3626949C6300F892FF /* EditPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA875E3526949C6300F892FF /* EditPageViewController.swift */; };
+		FA875E3826949C6B00F892FF /* EditPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA875E3726949C6B00F892FF /* EditPageViewController.storyboard */; };
+		FA9C1DE82694C2F000A43BB7 /* DetailPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9C1DE72694C2F000A43BB7 /* DetailPageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +66,11 @@
 		FA83519D2694583B00F9DD38 /* TabBarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarViewController.storyboard; sourceTree = "<group>"; };
 		FA83519F2694585900F9DD38 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		FA8351A2269459D400F9DD38 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		FA875E2F269494FA00F892FF /* DetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
+		FA875E312694950F00F892FF /* DetailPageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailPageViewController.storyboard; sourceTree = "<group>"; };
+		FA875E3526949C6300F892FF /* EditPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPageViewController.swift; sourceTree = "<group>"; };
+		FA875E3726949C6B00F892FF /* EditPageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditPageViewController.storyboard; sourceTree = "<group>"; };
+		FA9C1DE72694C2F000A43BB7 /* DetailPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,23 +85,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3D2431EE26946DCC0045FE46 /* New Group1 */ = {
+		63527F762694902300EA6617 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				3DEDBE0B26946D9500282D86 /* GalleryCell.swift */,
-				3DEDBE0C26946D9500282D86 /* GalleryCell.xib */,
+				63527F772694903A00EA6617 /* FileManager.swift */,
 			);
-			path = "New Group1";
+			path = Manager;
 			sourceTree = "<group>";
 		};
-		3D4DE86526946AB900377277 /* Gallery */ = {
+		63527F792694928300EA6617 /* Favourites */ = {
 			isa = PBXGroup;
 			children = (
-				3D2431EE26946DCC0045FE46 /* New Group1 */,
-				3DEDBE0626946C2300282D86 /* GalleryViewController.swift */,
-				3DEDBE0926946D3A00282D86 /* GalleryViewController.storyboard */,
+				63527F7B2694929D00EA6617 /* View */,
+				63527F7C269492B900EA6617 /* ViewModel */,
 			);
-			path = Gallery;
+			path = Favourites;
+			sourceTree = "<group>";
+		};
+		63527F7A2694929100EA6617 /* FavouritesCell */ = {
+			isa = PBXGroup;
+			children = (
+				63527F832694941B00EA6617 /* FavouritesCell.swift */,
+				63527F842694941B00EA6617 /* FavouritesCell.xib */,
+			);
+			path = FavouritesCell;
+			sourceTree = "<group>";
+		};
+		63527F7B2694929D00EA6617 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				63527F7A2694929100EA6617 /* FavouritesCell */,
+				63527F81269493DB00EA6617 /* FavouritesViewController.swift */,
+				63527F872694942A00EA6617 /* FavouritesViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		63527F7C269492B900EA6617 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				63527F772694903A00EA6617 /* FileManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		FA8351662694539C00F9DD38 = {
@@ -152,7 +187,6 @@
 		FA835189269455CD00F9DD38 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				3D4DE86526946AB900377277 /* Gallery */,
 				FA8351882694557800F9DD38 /* TabBar */,
 			);
 			path = Scenes;
@@ -285,10 +319,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DEDBE0E26946D9500282D86 /* GalleryCell.xib in Resources */,
-				3DEDBE0A26946D3A00282D86 /* GalleryViewController.storyboard in Resources */,
+				FA875E3826949C6B00F892FF /* EditPageViewController.storyboard in Resources */,
 				FA83519E2694583B00F9DD38 /* TabBarViewController.storyboard in Resources */,
 				FA83517F2694539E00F9DD38 /* LaunchScreen.storyboard in Resources */,
+				FA875E322694950F00F892FF /* DetailPageViewController.storyboard in Resources */,
 				FA83517C2694539E00F9DD38 /* Assets.xcassets in Resources */,
 				63527F862694941B00EA6617 /* FavouritesCell.xib in Resources */,
 				63527F882694942A00EA6617 /* FavouritesViewController.storyboard in Resources */,
@@ -318,6 +352,9 @@
 				63527F782694903A00EA6617 /* FileManager.swift in Sources */,
 				FA83519B269457A100F9DD38 /* AppCoordinator.swift in Sources */,
 				FA8351752694539D00F9DD38 /* SceneDelegate.swift in Sources */,
+				FA9C1DE82694C2F000A43BB7 /* DetailPageViewModel.swift in Sources */,
+				FA875E3626949C6300F892FF /* EditPageViewController.swift in Sources */,
+				FA875E30269494FA00F892FF /* DetailPageViewController.swift in Sources */,
 				FA8351992694579900F9DD38 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
