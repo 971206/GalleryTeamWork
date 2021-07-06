@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63527F782694903A00EA6617 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63527F772694903A00EA6617 /* FileManager.swift */; };
 		FA8351732694539C00F9DD38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8351722694539C00F9DD38 /* AppDelegate.swift */; };
 		FA8351752694539D00F9DD38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8351742694539D00F9DD38 /* SceneDelegate.swift */; };
 		FA83517C2694539E00F9DD38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA83517B2694539E00F9DD38 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63527F772694903A00EA6617 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		FA83516F2694539C00F9DD38 /* GalleryTeamWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GalleryTeamWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8351722694539C00F9DD38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA8351742694539D00F9DD38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63527F762694902300EA6617 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				63527F772694903A00EA6617 /* FileManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		FA8351662694539C00F9DD38 = {
 			isa = PBXGroup;
 			children = (
@@ -133,18 +143,11 @@
 		FA83518C269456AE00F9DD38 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				63527F762694902300EA6617 /* Manager */,
 				FA8351932694576D00F9DD38 /* Coordinator */,
 				FA83518E269456BE00F9DD38 /* Extensions */,
-				FA83518D269456BA00F9DD38 /* Managers */,
 			);
 			path = Infrastructure;
-			sourceTree = "<group>";
-		};
-		FA83518D269456BA00F9DD38 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Managers;
 			sourceTree = "<group>";
 		};
 		FA83518E269456BE00F9DD38 /* Extensions */ = {
@@ -261,6 +264,7 @@
 				FA8351A02694585900F9DD38 /* TabBarViewController.swift in Sources */,
 				FA8351A3269459D400F9DD38 /* BaseViewController.swift in Sources */,
 				FA835190269456DA00F9DD38 /* UICollectionView + Extension.swift in Sources */,
+				63527F782694903A00EA6617 /* FileManager.swift in Sources */,
 				FA83519B269457A100F9DD38 /* AppCoordinator.swift in Sources */,
 				FA8351752694539D00F9DD38 /* SceneDelegate.swift in Sources */,
 				FA8351992694579900F9DD38 /* Storyboarded.swift in Sources */,
