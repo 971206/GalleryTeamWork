@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Favourites-->
+        <scene sceneID="saX-fJ-Bey">
+            <objects>
+                <viewController storyboardIdentifier="FavouritesViewController" id="xqx-aC-gcM" customClass="FavouritesViewController" customModule="collectionGallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EV3-Xb-tEp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favourites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zpu-Bn-JjJ">
+                                <rect key="frame" x="20" y="54" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="AnL-uT-O7k"/>
+                                    <constraint firstAttribute="height" constant="40" id="hlj-Py-YP9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="s4r-st-4IT">
+                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="paP-fP-91C">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="og4-R6-aGL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="s4r-st-4IT" firstAttribute="top" secondItem="Zpu-Bn-JjJ" secondAttribute="bottom" id="0gL-B4-cOp"/>
+                            <constraint firstItem="Zpu-Bn-JjJ" firstAttribute="top" secondItem="og4-R6-aGL" secondAttribute="top" constant="10" id="6Aj-qC-vdF"/>
+                            <constraint firstItem="og4-R6-aGL" firstAttribute="bottom" secondItem="s4r-st-4IT" secondAttribute="bottom" id="9IT-ja-mN0"/>
+                            <constraint firstItem="Zpu-Bn-JjJ" firstAttribute="leading" secondItem="og4-R6-aGL" secondAttribute="leading" constant="20" id="Igp-BZ-cuF"/>
+                            <constraint firstItem="og4-R6-aGL" firstAttribute="trailing" secondItem="s4r-st-4IT" secondAttribute="trailing" id="S1R-7X-n8k"/>
+                            <constraint firstItem="s4r-st-4IT" firstAttribute="leading" secondItem="og4-R6-aGL" secondAttribute="leading" id="umq-w0-jAb"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Favourites" image="heart" catalog="system" id="2Ej-lX-ncL"/>
+                    <connections>
+                        <outlet property="collectionView" destination="s4r-st-4IT" id="lZO-qZ-fA7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uoe-iG-Mch" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-93" y="-19"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
